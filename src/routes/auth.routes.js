@@ -6,6 +6,7 @@ import { validateschema } from "../middlewares/validator.middewares.js";
 
 const router = Router();
 
+
 router.post('/register',validateschema(registerSchema),register);
 router.post('/login',validateschema(loginSchema), login);
 router.post('/logout', logout);
