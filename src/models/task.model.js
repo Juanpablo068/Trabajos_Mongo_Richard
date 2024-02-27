@@ -1,28 +1,25 @@
-import { response } from "express";
-import { mongoose } from "mongoose";
+import mongoose from "mongoose";
 
 const taskSchema = new mongoose.Schema({
-    title: { 
-        type: String,
-        required: true },
-    description: {
-        type: String, 
-        required: true },
-    date:{
-        type : Date , 
-        default : Date.now()
+    title :{
+        type : String,
+        required : true
+    }, 
+    description : {
+        type : String,
+        require: true
     },
-    user:{
+    date : {
+        type : Date,
+        default : Date.now
+    },
+    user : {
         type : mongoose.Schema.Types.ObjectId,
         ref : 'User',
-        require: true
+        require : true
     }
-
-
-    },{
-
-    timestamps: true
-
+},{
+    timestamps : true
 })
 
-export default mongoose.model('Task', taskSchema);
+export default mongoose.model('task', taskSchema );

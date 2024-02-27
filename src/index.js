@@ -1,5 +1,6 @@
-import app from './app.js';
-import { connectDB } from './db.js';
+import app from "./app.js"
 
-connectDB();
-app.listen(5001, () => console.log(`Server on PORT 5001`));
+import { conectDB} from "./db.js"
+
+conectDB();
+app.listen(5000, ()=> console.log('Server on PORT 5000'));

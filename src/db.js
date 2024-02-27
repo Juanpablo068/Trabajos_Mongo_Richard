@@ -1,10 +1,12 @@
+ import { response } from "express";
 import mongoose from "mongoose";
 
-export const connectDB = async()=>{
-    try{
+ export const conectDB = async()=>{
+
+    try {
         await mongoose.connect("mongodb://127.0.0.1/mernlogin");
-        console.log('>> MongoDB Connected...');
-    } catch (error){
+        console.log(">> DB Connect ");
+    } catch (error) {
         console.log(error)
     }
-}
+ }
