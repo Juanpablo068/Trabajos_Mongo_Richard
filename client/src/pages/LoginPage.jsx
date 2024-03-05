@@ -12,7 +12,7 @@ function LoginPage() {
 
   return (
     <div className="flex h-[calc(100vh-100px)] items-center justify-center">
-      {
+        {
           signinErrors.map((error, i) => (
             <div className='bg-red-500 text-white p-2' key={i}>
               {error}
